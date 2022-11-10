@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 
 // Some async data fetching function.
@@ -14,8 +13,8 @@ function getData() {
 export default async function Home() {
 	const data = await getData();
 
-	// This will not error on browser refresh.
-	return <h1>{data.value}</h1>;
+	// // This will not error on browser refresh.
+	// return <h1>{data.value}</h1>;
 
 	// This will error on browser refresh, if uncommented and loading.tsx exists.
 	// Try commenting it out, or renaming loading.tsx to something else and see!
