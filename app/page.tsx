@@ -17,7 +17,7 @@ export default async function Home() {
 	// This will not error on browser refresh.
 	return <h1>{data.value}</h1>;
 
-	// This will error, if uncommented and loading.tsx exists.
+	// This will error on browser refresh, if uncommented and loading.tsx exists.
 	// Try commenting it out, or renaming loading.tsx to something else and see!
 	return <h1 className={styles.exampleClass}>{data.value}</h1>;
 }
