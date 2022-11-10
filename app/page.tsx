@@ -13,11 +13,11 @@ function getData() {
 // Our async server component.
 export default async function Home() {
 	const data = await getData();
-	console.log(data);
-	console.log(styles.title);
+
 	// This will not error on browser refresh.
 	return <h1>{data.value}</h1>;
 
-	// This will, if uncommented and loading.tsx exists.
-	// return <h1 className={styles.title}>{data.value}</h1>;
+	// This will error, if uncommented and loading.tsx exists.
+	// Try commenting it out, or renaming loading.tsx to something else and see!
+	return <h1 className={styles.exampleClass}>{data.value}</h1>;
 }
